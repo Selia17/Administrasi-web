@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadia Putri — Portofolio</title>
+  <meta name="description" content="Portofolio Nadia Putri, Front-End Developer & UI/UX Designer." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            blush: { 50: '#FFF7F9', 100: '#FFEAF0', 200: '#FFD6E2', 300: '#F9B8CB', 400: '#F08CA9' },
+            butter: { 50: '#FFFCEB', 100: '#FFF6C9', 200: '#FFEE9E', 300: '#FBE17A' },
+            ink: '#3B2A33',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { background: #FFFDF8; color: #3B2A33; }
+    .hero-word { font-size: clamp(3.5rem, 15vw, 11rem); line-height: .95; letter-spacing: -0.03em; }
+    :focus-visible { outline: 3px solid #F08CA9; outline-offset: 3px; border-radius: 8px; }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+    .rise-2 { animation-delay: .15s; }
+    .rise-3 { animation-delay: .3s; }
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; } html { scroll-behavior: auto; } }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#FFFDF8]/85 backdrop-blur border-b border-blush-100">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+      <a href="#home" class="font-display text-xl font-semibold">Seliandini</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <li><a class="hover:text-blush-400 transition" href="#about">Tentang</a></li>
+        <li><a class="hover:text-blush-400 transition" href="#work">Pengalaman & Proyek</a></li>
+        <li><a class="hover:text-blush-400 transition" href="#skills">Skill</a></li>
+        <li><a class="hover:text-blush-400 transition" href="#contact">Kontak</a></li>
+      </ul>
+      <a href="#contact" class="md:hidden text-sm font-semibold bg-butter-200 px-4 py-2 rounded-full">Hubungi</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full bg-blush-200/70" aria-hidden="true"></div>
+      <div class="absolute bottom-0 -left-16 w-56 h-56 rounded-full bg-butter-100" aria-hidden="true"></div>
+
+      <div class="relative max-w-6xl mx-auto px-5 pt-20 pb-24 md:pt-32 md:pb-36">
+        <p class="rise text-base md:text-lg text-ink/70 mb-4">Hai, saya Selia — Front-End Developer & UI/UX Designer.</p>
+        <h1 class="rise rise-2 font-display italic font-normal hero-word text-ink">wonderful</h1>
+        <p class="rise rise-3 mt-6 max-w-md text-lg text-ink/75 leading-relaxed">
+          Saya merancang dan membangun antarmuka web yang rapi, ramah, dan enak dipakai.
+        </p>
+        <div class="rise rise-3 mt-10 flex flex-wrap gap-4">
+          <a href="#work" class="bg-butter-200 hover:bg-butter-300 transition px-7 py-3.5 rounded-full font-semibold">Lihat proyek saya</a>
+          <a href="#contact" class="border-2 border-blush-300 hover:bg-blush-100 transition px-7 py-3.5 rounded-full font-semibold">Ajak kerja sama</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-blush-50 py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-5 gap-12 items-center">
+        <div class="md:col-span-2 flex justify-center">
+          <!-- Ganti dengan foto: <img src="foto.jpg" class="..."> -->
+          <div class="w-60 h-72 md:w-72 md:h-80 rounded-t-full rounded-b-3xl bg-blush-200 flex items-center justify-center font-display text-7xl text-ink/60">NP</div>
+        </div>
+        <div class="md:col-span-3">
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6">Tentang saya</h2>
+          <p class="text-ink/80 leading-relaxed mb-4 max-w-prose">
+            Saya Front-End Developer dengan pengalaman lebih dari 4 tahun membangun website dan aplikasi web untuk startup dan UMKM. Saya suka bekerja di titik temu antara desain dan kode: memastikan tampilan indah, cepat, dan mudah diakses.
+          </p>
+          <p class="text-ink/80 leading-relaxed max-w-prose">
+            Di luar pekerjaan, saya menulis di blog tentang desain antarmuka, berkebun di balkon, dan mencari kopi susu terbaik di kota.
+          </p>
+          <dl class="mt-8 flex flex-wrap gap-4 text-sm">
+            <div class="bg-butter-100 rounded-2xl px-5 py-3"><dt class="text-ink/60">Lokasi</dt><dd class="font-semibold">Makassar, Indonesia</dd></div>
+            <div class="bg-butter-100 rounded-2xl px-5 py-3"><dt class="text-ink/60">Pengalaman</dt><dd class="font-semibold">4+ tahun</dd></div>
+            <div class="bg-butter-100 rounded-2xl px-5 py-3"><dt class="text-ink/60">Status</dt><dd class="font-semibold">Terbuka untuk proyek</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & PROJECTS -->
+    <section id="work" class="py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Pengalaman & proyek</h2>
+        <p class="text-ink/70 mb-12 max-w-xl">Beberapa pekerjaan dan proyek yang paling saya banggakan.</p>
+
+        <h3 class="font-semibold text-lg mb-5">Pengalaman kerja</h3>
+        <div class="grid gap-6 md:grid-cols-3 mb-16">
+          <article class="bg-blush-100 rounded-3xl p-7">
+            <p class="text-sm text-ink/60 mb-2">2024 – sekarang</p>
+            <h4 class="font-display text-xl font-semibold">Senior Front-End Developer</h4>
+            <p class="text-sm font-medium text-ink/80 mb-3">PT Kreasi Digital</p>
+            <p class="text-sm text-ink/75 leading-relaxed">Memimpin tim kecil membangun design system dan dashboard klien. Mempercepat waktu muat halaman hingga 40%.</p>
+          </article>
+          <article class="bg-butter-100 rounded-3xl p-7">
+            <p class="text-sm text-ink/60 mb-2">2022 – 2024</p>
+            <h4 class="font-display text-xl font-semibold">UI/UX Designer & Developer</h4>
+            <p class="text-sm font-medium text-ink/80 mb-3">Studio Lentera</p>
+            <p class="text-sm text-ink/75 leading-relaxed">Mendesain dan mengembangkan lebih dari 15 website untuk UMKM, dari riset pengguna sampai peluncuran.</p>
+          </article>
+          <article class="bg-blush-100 rounded-3xl p-7">
+            <p class="text-sm text-ink/60 mb-2">2021 – 2022</p>
+            <h4 class="font-display text-xl font-semibold">Junior Web Developer</h4>
+            <p class="text-sm font-medium text-ink/80 mb-3">Freelance</p>
+            <p class="text-sm text-ink/75 leading-relaxed">Membuat landing page dan toko online dengan HTML, CSS, dan JavaScript untuk berbagai klien lokal.</p>
+          </article>
+        </div>
+
+        <h3 class="font-semibold text-lg mb-5">Proyek pilihan</h3>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="#" class="group block bg-white border border-blush-200 rounded-3xl overflow-hidden hover:border-blush-400 transition">
+            <div class="h-40 bg-blush-200 flex items-center justify-center font-display text-3xl text-ink/50">Warung Kita</div>
+            <div class="p-6">
+              <h4 class="font-display text-xl font-semibold mb-2">Warung Kita</h4>
+              <p class="text-sm text-ink/70 leading-relaxed mb-4">Toko online untuk UMKM kuliner dengan keranjang dan pembayaran QRIS.</p>
+              <p class="text-xs text-ink/60">HTML · Tailwind · JavaScript</p>
+            </div>
+          </a>
+          <a href="#" class="group block bg-white border border-blush-200 rounded-3xl overflow-hidden hover:border-blush-400 transition">
+            <div class="h-40 bg-butter-200 flex items-center justify-center font-display text-3xl text-ink/50">Catat.in</div>
+            <div class="p-6">
+              <h4 class="font-display text-xl font-semibold mb-2">Catat.in</h4>
+              <p class="text-sm text-ink/70 leading-relaxed mb-4">Aplikasi pencatat keuangan pribadi dengan grafik pengeluaran bulanan.</p>
+              <p class="text-xs text-ink/60">React · Chart.js · Firebase</p>
+            </div>
+          </a>
+          <a href="#" class="group block bg-white border border-blush-200 rounded-3xl overflow-hidden hover:border-blush-400 transition">
+            <div class="h-40 bg-blush-100 flex items-center justify-center font-display text-3xl text-ink/50">Pulau Kopi</div>
+            <div class="p-6">
+              <h4 class="font-display text-xl font-semibold mb-2">Pulau Kopi</h4>
+              <p class="text-sm text-ink/70 leading-relaxed mb-4">Rebranding dan website company profile untuk kedai kopi lokal.</p>
+              <p class="text-xs text-ink/60">Figma · Next.js · Tailwind</p>
+            </div>
+          </a>
+          <a href="#" class="group block bg-white border border-blush-200 rounded-3xl overflow-hidden hover:border-blush-400 transition">
+            <div class="h-40 bg-butter-100 flex items-center justify-center font-display text-3xl text-ink/50">Belajar Bareng</div>
+            <div class="p-6">
+              <h4 class="font-display text-xl font-semibold mb-2">Belajar Bareng</h4>
+              <p class="text-sm text-ink/70 leading-relaxed mb-4">Platform kelas online dengan jadwal, materi, dan forum diskusi.</p>
+              <p class="text-xs text-ink/60">Vue · Laravel · MySQL</p>
+            </div>
+          </a>
+          <a href="#" class="group block bg-white border border-blush-200 rounded-3xl overflow-hidden hover:border-blush-400 transition">
+            <div class="h-40 bg-blush-200 flex items-center justify-center font-display text-3xl text-ink/50">Jalan-Jalan</div>
+            <div class="p-6">
+              <h4 class="font-display text-xl font-semibold mb-2">Jalan-Jalan</h4>
+              <p class="text-sm text-ink/70 leading-relaxed mb-4">Desain UI aplikasi mobile perencana perjalanan, dari riset hingga prototipe.</p>
+              <p class="text-xs text-ink/60">Figma · Prototyping · User Research</p>
+            </div>
+          </a>
+          <a href="#" class="group block bg-white border border-blush-200 rounded-3xl overflow-hidden hover:border-blush-400 transition">
+            <div class="h-40 bg-butter-200 flex items-center justify-center font-display text-3xl text-ink/50">Dasbor Klinik</div>
+            <div class="p-6">
+              <h4 class="font-display text-xl font-semibold mb-2">Dasbor Klinik</h4>
+              <p class="text-sm text-ink/70 leading-relaxed mb-4">Dashboard admin untuk jadwal pasien dan laporan harian klinik.</p>
+              <p class="text-xs text-ink/60">React · TypeScript · Tailwind</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="bg-butter-50 py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Skill</h2>
+        <p class="text-ink/70 mb-10 max-w-xl">Alat dan keahlian yang saya gunakan sehari-hari.</p>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="font-semibold mb-3">Pengembangan</h3>
+            <ul class="flex flex-wrap gap-3">
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">HTML5</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">CSS3</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">Tailwind CSS</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">JavaScript</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">TypeScript</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">React</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">Next.js</li>
+              <li class="bg-blush-200 px-4 py-2 rounded-full text-sm font-medium">Git</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-3">Desain</h3>
+            <ul class="flex flex-wrap gap-3">
+              <li class="bg-butter-200 px-4 py-2 rounded-full text-sm font-medium">Figma</li>
+              <li class="bg-butter-200 px-4 py-2 rounded-full text-sm font-medium">Wireframing</li>
+              <li class="bg-butter-200 px-4 py-2 rounded-full text-sm font-medium">Prototyping</li>
+              <li class="bg-butter-200 px-4 py-2 rounded-full text-sm font-medium">Design System</li>
+              <li class="bg-butter-200 px-4 py-2 rounded-full text-sm font-medium">User Research</li>
+              <li class="bg-butter-200 px-4 py-2 rounded-full text-sm font-medium">Aksesibilitas</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-3">Soft skill</h3>
+            <ul class="flex flex-wrap gap-3">
+              <li class="bg-white border border-blush-200 px-4 py-2 rounded-full text-sm font-medium">Komunikasi</li>
+              <li class="bg-white border border-blush-200 px-4 py-2 rounded-full text-sm font-medium">Kerja tim</li>
+              <li class="bg-white border border-blush-200 px-4 py-2 rounded-full text-sm font-medium">Manajemen waktu</li>
+              <li class="bg-white border border-blush-200 px-4 py-2 rounded-full text-sm font-medium">Problem solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28">
+      <div class="max-w-3xl mx-auto px-5 text-center">
+        <h2 class="font-display text-3xl md:text-5xl font-semibold mb-5">Punya ide? Mari ngobrol.</h2>
+        <p class="text-ink/70 mb-10 max-w-lg mx-auto">Saya terbuka untuk proyek freelance, kolaborasi, maupun pekerjaan tetap. Kirim pesan dan saya balas dalam 1–2 hari kerja.</p>
+
+        <a href="mailto:nadia@example.com" class="inline-block bg-butter-200 hover:bg-butter-300 transition px-8 py-4 rounded-full font-semibold text-lg">nadia@example.com</a>
+
+        <ul class="mt-10 flex flex-wrap justify-center gap-4 text-sm font-medium">
+          <li><a href="https://linkedin.com/in/username" class="block bg-blush-100 hover:bg-blush-200 transition px-5 py-2.5 rounded-full">LinkedIn</a></li>
+          <li><a href="https://github.com/username" class="block bg-blush-100 hover:bg-blush-200 transition px-5 py-2.5 rounded-full">GitHub</a></li>
+          <li><a href="https://instagram.com/username" class="block bg-blush-100 hover:bg-blush-200 transition px-5 py-2.5 rounded-full">Instagram</a></li>
+          <li><a href="https://wa.me/6281234567890" class="block bg-blush-100 hover:bg-blush-200 transition px-5 py-2.5 rounded-full">WhatsApp</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blush-100 py-8 text-center text-sm text-ink/70">
+    <p>© <span id="year">2026</span> Nadia Putri. Dibuat dengan HTML & Tailwind CSS.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
